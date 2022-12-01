@@ -7,12 +7,12 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class javaScannerNextLine {
+public class printingdifferwaysInScanner {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner (System.in);
 		
-		System.out.print("\rEnter first name: ");
+		System.out.print("Enter first name: ");
 		String fname = input.nextLine();
 		System.out.println("Using nextLine(): " + fname + "\n");
 		
@@ -40,8 +40,6 @@ public class javaScannerNextLine {
 		int intnum = input.nextInt();
 		System.out.println("Using nextInt() : " + intnum + "\n");
 		
-		
-		
 		//used new scanner to print the String using nextLine(); in which is repeating
 		Scanner newScanner1 = new Scanner(System.in);
 		
@@ -60,6 +58,10 @@ public class javaScannerNextLine {
 							"Using nextInt() : " + intnum);
 		
 		input.close();
+		newScanner1.close();
 	}
 }
+/*you can't input data in sequence accordingly in scanner but you can print it according to the sequence you like*/
 /*using nextLine(); prints multiple lines of words while next(); only prints a single line of word */
+
+
