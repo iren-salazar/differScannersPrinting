@@ -12,46 +12,54 @@ public class javaScannerNextLine {
 		
 		Scanner input = new Scanner (System.in);
 		
+		System.out.print("\rEnter first name: ");
+		String fname = input.nextLine();
+		System.out.println("Using nextLine(): " + fname + "\n");
+		
 		System.out.print("Enter greeting: ");
-		String value = input.nextLine();
-		System.out.print("Using nextLine(): "+ value + "\n");
+		String value = input.next();
+		System.out.print("Using next(): "+ value + "\n");
 		//printing nextBigInteger() repeatedly...
-		System.out.println("\rEnter big int num: ");
+		System.out.print("\rEnter big int num: ");
 		BigInteger bigInt = input.nextBigInteger();
 		System.out.println("Using nextBigInteger(): " + bigInt + "\n");
 		
-		System.out.println("\rEnter big int num: ");
+		System.out.print("\rEnter big int num again: ");
 		BigInteger secondbigInt = input.nextBigInteger();
 		System.out.println("Using nextBigInteger(): " + secondbigInt + "\n");
 		
-		System.out.println("\rEnter big decimal: "); //input
+		System.out.print("\rEnter big decimal: "); //input
 		BigDecimal bigDec = input.nextBigDecimal(); //stored
 		System.out.println("Using nextBigDecimal(): " + bigDec + "\n"); //print
 		
-		System.out.println("\rEnter double number: ");
+		System.out.print("\rEnter double number: ");
 		Double doub = input.nextDouble();
-		System.out.println("Using next(): " + doub + "\n");
+		System.out.println("Using nextDouble: " + doub + "\n");
 		
-		System.out.println("\rEnter integer number: ");
+		System.out.print("\rEnter integer number: ");
 		int intnum = input.nextInt();
-		System.out.println("Using next(): " + intnum + "\n");
+		System.out.println("Using nextInt() : " + intnum + "\n");
 		
-		System.out.println("\rEnter first name: ");
-		String fname = input.next();
-		System.out.println("Using next(): " + fname + "\n");
+		
 		
 		//used new scanner to print the String using nextLine(); in which is repeating
 		Scanner newScanner1 = new Scanner(System.in);
 		
-		System.out.println("\rEnter place: ");
+		System.out.print("\rEnter place: ");
 		String testplace = newScanner1.nextLine(); 
 		System.out.println("Using nextLine(): " + testplace + "\n");
 		
 		//print everything
-		System.out.println("Using nextLine(): " + value + "\r " + "Using next(): " + fname + "\r " + "Using nextBigInteger(): " + bigInt + "Using nextBigInteger(): " + secondbigInt + "\r " + "Using nextBigDecimal(): " + bigDec + "\r " + testplace + "\r " + doub + "\r " + intnum);
+		System.out.println("Using next(): " + value + "\r " +
+						   	"Using nextLine(): " + fname + "\r " +
+							"Using nextBigInteger(): " + bigInt + "\r " +
+						   	"Using nextBigInteger(): " + secondbigInt + "\r " +
+							"Using nextBigDecimal(): " + bigDec + "\r " +
+							"Using nextLine(); again in new Scanner: " +testplace + "\r " +
+							"Using nextDouble() : " + doub + "\r " + 
+							"Using nextInt() : " + intnum);
 		
 		input.close();
 	}
 }
-
 /*using nextLine(); prints multiple lines of words while next(); only prints a single line of word */
